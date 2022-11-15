@@ -7,11 +7,18 @@ export default {
 
 <template>
   <div class="container-jumbo">
-    <span> content goes here </span>
+    <div class="container">
+      <span> content goes here </span>
+    </div>
   </div>
 </template>
 
 
 <style lang="scss" scoped>
-height: 50px;
+.container-jumbo {
+  height: 150px;
+  background-color: black;
+  color: white;
+  font-size: 3rem;
+}
 </style>
