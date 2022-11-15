@@ -42,14 +42,14 @@ export default {
   width: 100%;
   background-color: $primary-color;
   .container {
-    height: 200px;
+    height: 160px;
     @include centralFlex("horizontal");
     justify-content: space-around;
     .box {
       color: white;
       @include centralFlex("vertical");
       img {
-        width: 50px;
+        width: 40px;
       }
       span {
         text-transform: uppercase;

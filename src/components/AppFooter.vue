@@ -10,7 +10,7 @@ export default {
     <div class="container">
       <div class="list-footer">
         <nav>
-          <h3>dc comics</h3>
+          <h3>DC COMICS</h3>
           <ul>
             <li>
               <a href="#">Characters</a>
@@ -34,7 +34,7 @@ export default {
               <a href="#">news</a>
             </li>
           </ul>
-          <h3>shop</h3>
+          <h3>SHOP</h3>
           <ul>
             <li>
               <a href="#">Shop Dc</a>
@@ -47,6 +47,7 @@ export default {
       </div>
       <div class="list-footer">
         <nav>
+          <h3>DC</h3>
           <ul>
             <li>
               <a href="#">Terms Of Use</a>
@@ -86,6 +87,7 @@ export default {
       </div>
       <div class="list-footer">
         <nav>
+          <h3>SITES</h3>
           <ul>
             <li>
               <a href="#">DC</a>
@@ -105,6 +107,9 @@ export default {
           </ul>
         </nav>
       </div>
+      <div class="img-footer">
+        <img src="../assets/img/dc-logo-bg.png" alt="" />
+      </div>
     </div>
   </footer>
 </template>
@@ -115,7 +120,36 @@ export default {
 @use "../style/partials/mixin" as *;
 
 footer {
+  padding: 20px;
   width: 100%;
-  background-color: black;
+  height: 350px;
+  background-size: cover;
+  position: relative;
+  background-image: url("../assets/img/footer-bg.jpg");
+  .container {
+    @include centralFlex("vertical");
+    align-items: flex-start;
+    h3 {
+      color: white;
+      margin-left: 20px;
+    }
+    ul {
+      margin-top: 20px;
+      margin-bottom: 10px;
+      li {
+        list-style: none;
+        margin-left: 20px;
+        a {
+          font-size: 0.8rem;
+          text-decoration: none;
+          color: gray;
+        }
+      }
+    }
+    .img-footer {
+      width: 450px;
+      align-items: flex-end;
+    }
+  }
 }
 </style>
