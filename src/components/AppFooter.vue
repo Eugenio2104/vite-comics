@@ -107,9 +107,6 @@ export default {
           </ul>
         </nav>
       </div>
-      <div class="img-footer">
-        <img src="../assets/img/dc-logo-bg.png" alt="" />
-      </div>
     </div>
   </footer>
 </template>
@@ -122,11 +119,14 @@ export default {
 footer {
   padding: 20px;
   width: 100%;
-  height: 350px;
   background-size: cover;
   position: relative;
   background-image: url("../assets/img/footer-bg.jpg");
   .container {
+    height: 350px;
+    background-image: url("../assets/img/dc-logo-bg.png");
+    background-position: right;
+    background-repeat: no-repeat;
     @include centralFlex("vertical");
     align-items: flex-start;
     h3 {
@@ -149,6 +149,7 @@ footer {
     .img-footer {
       width: 450px;
       align-items: flex-end;
+      position: relative;
     }
   }
 }
