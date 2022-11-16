@@ -120,7 +120,6 @@ footer {
   padding: 20px;
   width: 100%;
   background-size: cover;
-  position: relative;
   background-image: url("../assets/img/footer-bg.jpg");
   .container {
     height: 350px;

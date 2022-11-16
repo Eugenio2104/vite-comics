@@ -7,18 +7,16 @@ export default {
 
 <template>
   <div class="container-jumbo">
-    <div class="container">
-      <span> content goes here </span>
-    </div>
+    <div class="container"></div>
   </div>
 </template>
 
 
 <style lang="scss" scoped>
 .container-jumbo {
-  height: 150px;
-  background-color: black;
-  color: white;
-  font-size: 3rem;
+  height: 500px;
+  background-image: url("../src/assets/img/jumbotron.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 </style>
