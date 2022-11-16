@@ -1,6 +1,62 @@
 <script>
 export default {
   name: "AppHeader",
+  data() {
+    return {
+      menu: [
+        {
+          text: "characters",
+          href: "#",
+          current: "false",
+        },
+        {
+          text: "comics",
+          href: "#",
+          current: "active",
+        },
+        {
+          text: "movies",
+          href: "#",
+          current: "false",
+        },
+        {
+          text: "tv",
+          href: "#",
+          current: "false",
+        },
+        {
+          text: "games",
+          href: "#",
+          current: "false",
+        },
+        {
+          text: "collectibles",
+          href: "#",
+          current: "false",
+        },
+        {
+          text: "videos",
+          href: "#",
+          current: "false",
+        },
+        {
+          text: "fans",
+          href: "#",
+          current: "false",
+        },
+        {
+          text: "news",
+          href: "#",
+          current: "false",
+        },
+        {
+          text: "shop",
+          href: "#",
+          current: "false",
+        },
+      ],
+    };
+  },
 };
 </script>
 
@@ -13,16 +69,13 @@ export default {
       </div>
       <nav>
         <ul>
-          <li><a href="#">CHARACTERS</a></li>
-          <li><a class="active" href="#">COMICS</a></li>
-          <li><a href="#">MOVIES</a></li>
-          <li><a href="#">TV</a></li>
-          <li><a href="#">GAMES</a></li>
-          <li><a href="#">COLLECTIBLES</a></li>
-          <li><a href="#">VIDEOS</a></li>
-          <li><a href="#">FANS</a></li>
-          <li><a href="#">NEWS</a></li>
-          <li><a href="#">SHOP</a></li>
+          <li v-for="(link, index) in menu" :key="index">
+            <a
+              :class="{ active: link.current == 'active' }"
+              :href="link.href"
+              >{{ link.text }}</a
+            >
+          </li>
         </ul>
       </nav>
     </div>
@@ -54,6 +107,7 @@ export default {
           font-weight: 600;
           font-size: 0.9rem;
           color: #464646;
+          text-transform: uppercase;
           text-decoration: none;
           &.active,
           &:hover {
